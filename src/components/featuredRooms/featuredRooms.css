@@ -1,0 +1,109 @@
+.featured-rooms-center {
+    width: 70%;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap; /* Wrap items to the next row if they don’t fit */
+    justify-content: space-between; /* Space out items evenly */
+    gap: 2rem; /* Add space between rows and columns */
+  }
+  
+  .featured-room {
+    position: relative;
+    flex: 1 1 calc(33.333% - 2rem); /* Flex basis for 3 items per row with spacing */
+    max-width: calc(33.333% - 2rem); /* Ensure max width matches flex basis */
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  @media screen and (max-width: 992px) {
+    .featured-room {
+      flex: 1 1 calc(45% - 2rem); /* Adjust to 2 items per row on medium screens */
+      max-width: calc(45% - 2rem);
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .featured-room {
+      flex: 1 1 100% ; /* Adjust to 1 item per row on small screens */
+      max-width: 100%
+    }
+  }
+  
+  .featured-room:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+   
+  }
+  .featured-room:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+  }
+  .overlay span
+  {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color:white;
+    text-decoration: none;
+  }
+
+  
+ 
+    .featured-room img {
+        width: 100%; 
+        height: 260px; 
+        object-fit: cover; 
+        border-radius: 5px; 
+      }
+  
+  .room-info {
+    padding: 0.3rem;
+    text-align: center;
+   
+    background: var(--darkGrey);
+  }
+  
+  .room-info h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+    
+  }
+  
+
+  .room-price {
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    background: rgba(0, 0, 0, 0.7); 
+    color: #fff; 
+    padding: 10px 10px;
+    width: 80px;
+    height: 50px;
+   
+    border-bottom-right-radius: 25px; 
+    font-size: 1rem; 
+    font-weight: bold;
+  }
+  

@@ -1,0 +1,117 @@
+
+
+  .filteredrooms-center {
+    width: 90%; /* Take up 90% of the available width */
+    max-width: 1200px; /* Limit the maximum width */
+    margin: 2rem auto; /* Center the container horizontally */
+   
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: flex-start; /* Align items at the top of the container */
+    flex-wrap: wrap; /* Allow wrapping of items */
+    gap: 20px; /* Space between items */
+    padding: 1rem; /* Add padding around the container */
+    border-radius: 10px; /* Optional: Rounded corners for the container */
+  }
+  
+  
+  /* Loading state styles */
+  .filteredrooms-center h1 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .filteredrooms-center img {
+    display: block;
+    margin: 0 auto;
+    width: 100px; /* Loading spinner size */
+  }
+  
+  /* Individual room card */
+  .filtered-room {
+    background: #ffffff; /* White background */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    overflow: hidden; /* Ensure content stays within the card */
+    position: relative; /* For price positioning */
+    width: 300px; /* Fixed width */
+    height: 350px; /* Fixed height */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
+  }
+  
+  /* Hover effect for room cards */
+  .filtered-room:hover {
+    transform: translateY(-5px); /* Lift the card slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+  }
+
+  /* Overlay styling */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Transparent black background */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .filtered-room:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+  }
+  
+  .overlay span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color:white;
+    text-decoration: none;
+  }
+  
+  
+  /* Room image styling */
+  .filtered-room img {
+    width: 100%; /* Make the image fill the card */
+    height: 80%; /* Occupy 70% of the card height */
+    object-fit: cover; /* Crop the image if needed */
+  }
+  
+  /* Room info section */
+  .filteredroom-info {
+    padding: 0.5rem;
+    text-align: center;
+    height: 15%; /* Take 15% of card height */
+    display: flex;
+    align-items: center; /* Center-align vertically */
+    justify-content: center; /* Center-align horizontally */
+  }
+  
+  .filteredroom-info h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333; /* Darker text color */
+    margin: 0;
+    text-transform: capitalize; /* Capitalize room name */
+  }
+  
+  /* Room price section */
+  .filteredroom-price {
+    position: absolute; /* Absolute positioning */
+    top: 0px; /* Position price at the top */
+    left: 0px; /* Align price to the left */
+    background: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 0.3rem 0.5rem; /* Padding for the price box */
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 5px; /* Rounded corners for price box */
+  }
+  

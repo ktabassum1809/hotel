@@ -1,0 +1,53 @@
+
+  
+  .filter-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem auto; /* Center the filter-container horizontally */
+    max-width: 1200px; /* Set a max width for the container */
+    padding: 1rem;
+    background: #f9f9f9; /* Light background to differentiate */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  }
+  
+  .filter-container .form-group {
+    margin-bottom: 1.5rem; /* Space between form fields */
+  }
+  
+  .filter-container label {
+    display: block; /* Ensure labels are above inputs */
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .filter-container input,
+  .filter-container select {
+    width: 100%;
+    max-width: 300px; /* Set a consistent width for form controls */
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  input[type="range"] {
+    width: 100%; /* Make range slider fill the container */
+  }
+  input[type="checkbox"] {
+    width: auto; /* Make checkbox size consistent */
+    margin-left: 0.5rem; /* Add some space between label and checkbox */
+    margin-bottom: 0.5rem;
+}
+
+.breakfast-group {
+    display: flex;
+    align-items: center; /* Align the label and checkbox vertically */
+    gap: 0.5rem; /* Space between the label and checkbox */
+}
+.pet-group {
+    display: flex;
+    align-items: center; /* Align the label and checkbox vertically */
+    gap: 0.5rem; /* Space between the label and checkbox */
+}

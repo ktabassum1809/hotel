@@ -1,0 +1,15 @@
+.defaultHero,
+.roomsHero {
+  min-height: calc(100vh - 66px);   /* minus height of  navbar */
+  background: url("./defaultBcg.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.roomsHero {
+  background-image: url("/room-2.jpeg");
+  min-height: 60vh;
+}
